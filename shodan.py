@@ -36,7 +36,7 @@ def send_request(endpoint, arguments, team, password):
     url = 'https://{}/api/{}/{}'.format(SERVER, VERSION, endpoint)
     urllib3.disable_warnings()
     if payload:
-        r = requests.post(url, verify=CERTIFICATE, auth=(team, password), data=payload)
+        r = requests.post(url, verify=CERTIFICATE, auth=(team, password), json=payload)
     else:
         r = requests.get(url, verify=CERTIFICATE, auth=(team, password))
 
