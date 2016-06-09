@@ -7,7 +7,7 @@ from requests.packages import urllib3
 from requests.exceptions import HTTPError
 
 SERVER = 'shodan.epitech.eu'
-VERSION = 1.0
+VERSION = 1.1
 CERTIFICATE = 'shodan.crt'
 
 
@@ -19,7 +19,7 @@ def get_payload(endpoint, arguments):
     elif endpoint == 'score':
         if len(arguments) < 2:
             raise ValueError('Not enough arguments')
-        return {'name': arguments[0], 'flag': arguments[1]}
+        return {'chinpokomon': arguments[0], 'flag': arguments[1]}
     return {}
 
 
